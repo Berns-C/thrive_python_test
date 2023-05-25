@@ -1,4 +1,4 @@
-#Bernhard Cena - Thrive Python Take Home Test I#
+#Bernhard Cena - Thrive Python Take Home Test#
 from bs4 import BeautifulSoup
 import requests
 
@@ -28,7 +28,7 @@ def appendToTextFile(new_movie_list):
 
 def handleExtraction(new_movie_list, indexArr):
     for movieRowElement in movie_table_list:
-        if indexArr > 0:
+        if indexArr > 0 and indexArr < 11:
             movieTitleRow = getElement(movieRowElement,'td',"titleColumn")
             ratingRow = getElement(movieRowElement,'td',"imdbRating")
             moveTitleName = formatMovieName(movieTitleRow.get_text())
